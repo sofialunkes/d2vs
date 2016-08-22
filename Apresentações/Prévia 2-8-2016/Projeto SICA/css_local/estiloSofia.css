@@ -1,0 +1,20 @@
+﻿
+.customSofia .panel-heading {
+    background-color: #B0D137;
+    /*color: #fff;*/
+}
+
+.tagEspecialidade {
+    border: 0px solid #808080;
+    border-radius: 5px;
+    background-color: #6a3990;
+    padding: 9px;
+    box-shadow: inset 0px 0px 10px #ffffff, 0px 0px 0px #ff0;
+    color:white;
+    /*background-color:#ddd;*/
+    /*width:200px;*/
+    padding: 10px;
+}
+.borda-esquerda{
+    border-left:2px solid #808080;
+}

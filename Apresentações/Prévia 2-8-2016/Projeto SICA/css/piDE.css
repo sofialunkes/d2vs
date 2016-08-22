@@ -1,0 +1,342 @@
+body {
+    font-family: Calibri;
+    background-color: #eee;
+}
+
+#fundo { /*fundo cinza da tela*/
+    background-color: #eee;
+}
+
+.opcao { /*opcao do usuario para entrar ou cadastrar-se*/
+    font-size: 19px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#barraPesquisa { /*formatação da barra de peesquisa*/
+    align-items: center;
+    padding-top: 17px;
+}
+
+/*parte link modal da tela inicial=Entrar e Cadastar-se*/
+.entrarCadastrar {
+    text-decoration: none;
+    color: #ccc;
+}
+
+    .entrarCadastrar:hover {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+.titulo {
+    color: white;
+}
+
+.titulo1 {
+    color: black;
+    text-align: center;
+}
+
+.textos {
+    color: black;
+    
+}
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 0px;
+}
+
+.modal2 {
+    border: 2px solid #54217c;
+}
+
+.modalCor {
+    background-color: #54217C;
+}
+
+#cadastre {
+    width: 130px;
+    margin-left: -15px;
+}
+/*fim do link modal*/
+
+.OU { /*palavra ou no cadastro de cliente*/
+    color: #ccc;
+    text-align: center;
+}
+
+.hrOp { /*hr que é linha para escolher entre fazer login ou enviar email de esqueceu a senha*/
+    height: 2px;
+    border: none;
+    background-color: #ccc;
+}
+
+.hrOU { /*linha antes do OU na escolha entre cadastrar-se com face/goo ou normal*/
+    height: 2px;
+    border: none;
+    background-color: #ccc;
+    width: 120%;
+    margin-right: -40px;
+}
+
+.hrOU2 { /*linha depois do OU na escolha entre cadastrar-se com face/goo ou normal*/
+    height: 2px;
+    border: none;
+    background-color: #ccc;
+    width: 120%;
+    margin-left: -40px;
+}
+
+.logos { /*logos do FACEBOOK e GOOGLE*/
+    width: 40px;
+    height: 40px;
+}
+
+.funndo { /*fundos brancos*/
+    background: white;
+}
+
+.pVertical {
+    border-style: groove;
+    max-height: 450px;
+    min-height: 150px;
+    text-align: justify;
+}
+
+/*parte link modal da area do autonomo/Seja um Cliente Premium*/
+.panel {
+    border-width: 3px;
+    border-color: #54217C;
+    max-width: 700px;
+    min-width: 50px;
+}
+
+.clientePremium {
+    text-decoration: none;
+    color: #54217C;
+    text-align: center;
+}
+
+    .clientePremium:hover {
+        color: #B0D137;
+        text-decoration: none;
+    }
+
+/*fim do link modal*/
+
+/*começando carousel*/
+.fotosAutonomos {
+    width: 40%;
+    border-radius: 100%;
+}
+
+.nomeAutonomos {
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+.profissaoAutonomos {
+    color: #000;
+    text-align: center;
+}
+
+.especialidadeAutonomo {
+    color: #000;
+    background: #B0D137;
+    width: 80%;
+    margin: auto;
+    height: 35px;
+    border-radius: 55px;
+    padding-top: 8px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+/*.esp {
+    margin-top: 30px;
+}*/
+
+.cardPerfil{
+    margin-top: 1%; 
+    background-color:white; 
+    border:solid 2px #54217c;
+    border-radius:1%;
+    margin-top: 2%;     
+}
+
+.caro {
+    height: 320px;
+    padding-top: 15px;
+}
+
+i:hover {
+    color: #B0D137;
+}
+
+.mySlides {
+    display: none;
+}
+
+.w3-left, .w3-right, .w3-badge {
+    cursor: pointer;
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+    color: #54217c;
+}
+/*terminando carousel*/
+
+
+.menuOP1 {
+    color: #54217C;
+}
+
+    .menuOP1:hover {
+        color: #B0D137;
+        text-decoration: none;
+    }
+
+.menuOP {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menuOP2 {
+    font-weight: bold;
+    font-family: Calibri;
+}
+
+/*accordeon*/
+#acordeon div {
+    height: 0px; /* defino todas as divs com alturas em 0 para escondelas */
+    overflow: hidden; /* tiro a barra de rolagem para evitar dores de cabeça*/
+    -webkit-transition: height 600ms; /* coloco um efeito de transição na propriedade height */
+    background: #fff;
+}
+
+    #acordeon div:target {
+        height: inherit; /* para a ancora atual é revelado o conteúdo almentando a altura da div */
+    }
+
+.img {
+    max-width: 90%;
+    border-radius: 100%;
+    margin-top: 15px;
+}
+
+.tabela {
+    min-width: 150px;
+    max-width: 1500px;
+    width: 1000px;
+    align-items: center;
+}
+
+.celula:hover {
+    color: #B0D137;
+}
+
+/*agenda*/
+th {
+    text-align: center;
+}
+
+a:focus, a:hover {
+    color: #B0D137;
+    text-decoration: none;
+}
+
+element.style {
+    color: #eeeeee;
+}
+
+.pVertical1{
+    border-style: groove;
+    max-height: 450px;
+    min-height: 150px;
+    height: 450px;
+    max-width: 550px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.cabecalho1 {
+    background: #54217C;
+    color: white;
+    font-size: 14pt;
+}
+
+.tr1 {
+    height: 55px;
+    font-size: 12pt;
+}
+
+.editar{
+    text-align: center;
+    padding-top: -15px;
+    text-decoration: none;
+    color: #54217c;
+}
+    .editar:hover {
+        color: #B0D137;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+
+/* Oferta de serviço*/
+.titulo2{
+    text-align: center;
+    color: white;
+}
+
+.textos2{
+    margin-top: -5px;
+    text-align: left;
+}
+.img1 {
+    max-width: 100%;
+    border-radius: 50%;    
+}
+.fundoRoxo{
+    background-color: #54217c;
+}
+.bordaa{
+    border: #54217c solid 2px;
+}
+.hr1{
+    border-color: #54217c; 
+    height: 4px;
+}
+
+/*parte link modal editar oferta de leilao*/
+.panelOferta {
+    border-width: 3px;
+    border-color: #54217C;
+    max-width: 700px;
+    min-width: 50px;
+}
+
+.ofertaLeilao {
+    text-decoration: none;
+    color: #54217C;
+    text-align: center;
+}
+
+    .ofertaLeilao:hover {
+        color: #B0D137;
+        text-decoration: none;
+    }
+
+/*fim do link modal*/
+/*fim da parte que eu fiz*/
+
+
+

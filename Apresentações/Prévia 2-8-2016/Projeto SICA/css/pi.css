@@ -1,0 +1,166 @@
+body {
+    font-family: Calibri;
+}
+
+/*Cartela de cores**************************/
+.principal {
+    background-color: #54217c;
+}
+
+.principal2 {
+    background-color: #b0d137;
+}
+
+.base {
+    background-color: #eeeeee;
+}
+
+.secundaria {
+    background-color: #ffffff;
+}
+
+.texto {
+    color: #000000;
+}
+
+.alerta {
+    color: #f44336;
+}
+
+.sucesso {
+    color: #4caf50;
+}
+
+/*Menu lateral de navegação***********/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background-color: #24053d;
+    overflow-x: hidden;
+    transition: .5s;
+    padding-top: 60px;
+}
+
+    .sidenav a {
+        padding: 3px 8px 3px 20px !important;
+        text-decoration: none;
+        font-size: 18px !important;
+        color: #bbb;
+        display: block;
+        transition: .3s;
+        font-family: Calibri;
+    }
+
+        .offcanvas a:focus, .sidenav a:hover {
+            color: #f1f1f1;
+            font-size: 20px !important;
+        }
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+@media screen and (max-height:450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+/*PERFIL DO AUTÔNOMO*/
+/*Cabeçalho para div de fotos e vídeos*/
+.headerAutonomo {
+    background-color: #54217c;
+    color: white;
+    padding: 5px;
+    padding-left: 15px;
+    font-weight:bold;
+}
+
+/*Botão de especialidade*/
+.especialidades {
+    background-color: #B0D137; /* Green */
+    border: none;
+    color: black;
+    padding: 8px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: none;
+    /*width: 100%;*/
+    border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+    #divRecomendadoPor {
+        display: none;
+    }
+}
+
+/*HOVER LOGIN*/
+.loginHover:hover {
+    color: white;
+}
+
+.pVertical {
+    border-style: groove;
+    max-height: 450px;
+    min-height: 150px;
+    text-align: justify;
+}
+
+.corRodape-divs{
+    background-color: #54217c;
+}
+
+/*Se a tela for <= 1200px, aplique essa configuração*/
+/*@media screen and (max-width: 1200px) {
+    escritaCor-div {
+        background-color: #54217c;
+    }
+
+    .iconeCor-div {
+        background-color: #54217c;
+    }
+}*/
+
+/*Se a tela for <= 1200px, aplique essa configuração*/
+/*@media screen and (max-width: 1200px) {
+    .cabecalhoRespo {
+        height: 114px;
+    }
+}*/
+
+/*Ícones rodapé*/
+.iconeRodape {
+    margin: 4% 0px;
+    width: 40px;
+    height: 40px;
+}
+
+/*Escrita rodapé*/
+.escritaRodape {
+    display: inline-block;
+    color: white;
+    border-bottom: 1px solid white;
+    margin-top: 4%;
+}
+
+/*Faixa verde rodapé*/
+.faixaVerde-rodape {
+    border-top: 3px solid #B0D137;
+    height: 60px;
+}

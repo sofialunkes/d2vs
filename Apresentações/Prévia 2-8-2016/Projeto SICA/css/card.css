@@ -1,0 +1,31 @@
+﻿.card-usuario-forma {
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24),0 5px 50px 0 rgba(0,0,0,0.19) !important;
+    margin: 16px !important;
+    width: 250px;
+    height: 260px;
+    background-image: linear-gradient(to bottom,#54217c 35%, #ffffff 35%);
+}
+
+    .card-usuario-forma:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19) !important;
+        background-image: linear-gradient(to bottom,#5f2c87 35%, #fcfcfc 35%);
+    }
+
+.card-usuario-legenda {
+    padding: 0.01em 16px;
+    text-align: center !important;
+    margin-top: 0;
+    background-color: white;
+}
+
+    .card-usuario-legenda:hover {
+        background-color: #fcfcfc;
+    }
+
+.a {
+    text-decoration: none;
+}
+
+    .a:focus {
+        background-color: black;
+    }
