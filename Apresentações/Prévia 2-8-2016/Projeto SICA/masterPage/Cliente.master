@@ -1,0 +1,378 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Cliente.master.cs" Inherits="masterPage_Cliente" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SICA</title>
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="../css/barraPesquisa.css" rel="stylesheet" />
+    <link href="../css/pi.css" rel="stylesheet" />
+    <link href="../css/materialdesignicons.min.css" rel="stylesheet" />
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/pi.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="secundaria">
+    <form id="form1" runat="server">
+        <header class="container-fluid principal">
+            <div class="row">
+                <%-- Abrir menu lateral --%>
+                <div class="col-lg-1" style="padding-top: 15px; height: 60px; display: inline-block">
+                    <nav>
+                        <span style="font-size: 20px; cursor: pointer; color: white;" onclick="openNav()">
+                            <i class="mdi mdi-menu" style="color: white !important"></i>
+                        </span>
+                    </nav>
+                </div>
+                <%-- Logotipo --%>
+                <div class="col-lg-1" style="padding-top: 8px; padding-bottom: 5px; margin-right: 10px; display: inline-block">
+                    <img src="../img/apenasLogo.png" />
+                </div>
+                <%-- Barra de pesquisa --%>
+                <div class="col-lg-7">
+                    <div class="input-group" id="adv-search">
+                        <input type="text" class="form-control" placeholder="Pesquisar" style="margin-top: 20px" autofocus/>
+                        <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                                <div class="dropdown dropdown-lg">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-top: 20px">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <div id="form-snippets" class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label for="filter">Filtrar por Estado: </label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>Belo Horizonte</option>
+                                                    <option value="1">São Paulo</option>
+                                                    <option value="2">Rio de Janeiro</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="filter">Filtrar por Cidade: </label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>Guaratinguetá</option>
+                                                    <option value="1">Lorena</option>
+                                                    <option value="2">São José dos Campos</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" id="btn-snippets" class="btn btn-default">
+                                                <span class="mdi mdi-magnify" aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-default" style="margin-top: 20px">
+                                    <span class="mdi mdi-magnify" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <%-- Fechar menu lateral --%>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 28px!important">×</a>
+            <a href="#editarPerfil" data-toggle="modal" style="text-decoration: none"><i class="mdi mdi-pencil"></i>&nbsp;Editar perfil </a>
+            <hr />
+            <a href="#"><i class="mdi mdi-logout"></i>&nbsp;Sair</a>
+        </div>
+        <%-- Corpo --%>
+        <section class="container">
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+        </section>
+        <footer class="container-fluid principal navbar-fixed-bottom">
+            <%-- Parte escrita --%>
+            <div class="row faixaVerde-rodape">
+                <div class="col-lg-4 col-lg-offset-1 corRodape-divs">
+                    <a href="../ConhecaSica.aspx">
+                        <span class="escritaRodape">Conheça o SICA</span>
+                    </a>
+                    &nbsp;
+                    <a href="#termosDeUso" data-toggle="modal">
+                        <span class="escritaRodape">Termos de uso</span>
+                    </a>
+                    &nbsp;
+                    <a href="#contatoSica" data-toggle="modal">
+                        <span class="escritaRodape">Contato</span>
+                    </a>
+                </div>
+                <%-- ícones de redes sociais --%>
+                <div class="col-lg-3 col-lg-offset-4 corRodape-divs">
+                    <a href="http://www.facebook.com">
+                        <img src="../img/1461628116_facebook.png" class="iconeRodape" />
+                    </a>
+                    &nbsp;
+                    <a href="http://www.twitter.com">
+                        <img src="../img/1461628148_twitter.png" class="iconeRodape" />
+                    </a>
+                    &nbsp;
+                    <a href="http://www.google.com">
+                        <img src="../img/1461628158_google.png" class="iconeRodape" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- GATILHO DO MODAL - EDITAR PERFIL DO CLIENTE. -->
+        <div id="editarPerfil" class="modal fade" role="dialog">
+            <div class="modal-dialog ">
+                <!-- CONTEÚDO DA MODAL -->
+                <div class="modal-content" style="border: solid 2px #54217C">
+                    <div class="modal-header" style="background-color: #54217C">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="color: white"><b>Editar perfil:</b></h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Nome:</h4>
+                        <asp:TextBox ID="txtEditNome" runat="server" placeholder="Nome completo" CssClass="form-control"></asp:TextBox>
+                        <h4>E-mail:</h4>
+                        <asp:TextBox ID="txtEmailEdit" runat="server" placeholder="E-mail" TextMode="Email" CssClass="form-control"></asp:TextBox>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Senha:</h4>
+                                <asp:TextBox ID="txtSenhaEdit" runat="server" placeholder="Senha" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <div class="col-lg-6">
+                                <h4>Confirmar senha:</h4>
+                                <asp:TextBox ID="txtConfirmarSenhaEdit" runat="server" placeholder="Confirmar senha" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                    <%-- BOTÕES --%>
+                    <div class="modal-footer">
+                        <asp:Button ID="btnSalvarEdit" runat="server" CssClass="btn btn-success" OnClick="btnSalvarEdit_Click" Text="Salvar"/>
+                        <%--<button type="button" class="btn-success btn" data-dismiss="modal">Salvar</button>--%>
+                        <button type="button" class="btn-danger btn" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GATILHO DO MODAL - CONTATO COM O SICA.-->
+        <div id="contatoSica" class="modal fade" role="dialog">
+            <div class="modal-dialog ">
+                <!-- CONTEÚDO DA MODAL -->
+                <div class="modal-content" style="border: solid 2px #54217C">
+                    <div class="modal-header" style="background-color: #54217C">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="color: white"><b>Contato com o SICA:</b></h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Nome completo:</h4>
+                        <asp:TextBox ID="txtNomeCompleto" runat="server" placeholder="Digite seu nome" CssClass="form-control"></asp:TextBox>
+                        <h4>E-mail:</h4>
+                        <asp:TextBox ID="TextBox1" runat="server" placeholder="E-mail" TextMode="Email" CssClass="form-control"></asp:TextBox>
+                        <h4>Assunto:</h4>
+                        <asp:TextBox ID="txtAssunto" runat="server" placeholder="Motivo do contato" CssClass="form-control"></asp:TextBox>
+                        <h4>Descrição:</h4>
+                        <asp:TextBox ID="txtDescricao" runat="server" placeholder="Informe o motivo do contato" CssClass="form-control" Height="100"></asp:TextBox>
+                    </div>
+                    <%-- BOTÕES --%>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-success btn" data-dismiss="modal">Enviar</button>
+                        <button type="button" class="btn-danger btn" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GATILHO DO MODAL - TERMOS DE USO. -->
+        <div id="termosDeUso" class="modal fade" role="dialog">
+            <div class="modal-dialog ">
+                <!-- Modal content-->
+                <div class="modal-content" style="border: solid 2px #54217C">
+                    <div class="modal-header" style="background-color: #54217C">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="color: white"><b>Termos de Uso:</b></h4>
+                    </div>
+                    <div class="modal-body" style="text-align: justify">
+                        <p style="text-align: justify">
+                            O site sica.com.br se trata de um serviço totalmente interativo e idealizado para oferecer,
+                            através da Internet, informações e prestação de serviços, a 
+                            partir da integração e articulação dinâmicas de bases de dados acerca de diversas fontes de 
+                            informação. Ao utilizar qualquer material deste site, você está concordando com os Termos de 
+                            Uso deste Serviço abaixo descritos. Se não concorda com eles, não use o site nem qualquer 
+                            material nele contido.
+                        </p>
+                        <h4>TERMOS DE USO</h4>
+                        <p>
+                            O acesso ao site SICA.COM.BR é gratuito. O SICA.COM.BR poderá criar áreas de acesso exclusivo 
+                            aos seus clientes ou para terceiros especialmente autorizados. O visitante poderá usar o site 
+                            SICA.COM.BR apenas para fins legais.
+                        </p>
+                        <p>
+                            O visitante não poderá usar o site SICA.COM.BR ou seus serviços para publicar, enviar, distribuir 
+                            ou divulgar nenhum material ou informação de caráter difamatório, obsceno ou ilícito, inclusive
+                             informações de propriedade exclusiva pertencentes a outras pessoas ou empresas, bem como marcas 
+                            registradas ou informações protegidas por direitos autorais, sem a expressa autorização do 
+                            detentor desses direitos.
+                        </p>
+                        <p>
+                            O SICA.COM.BR empenha-se em manter a qualidade, atualidade e autenticidade das informações
+                             do site. Entretanto, não é responsável pelas conseqüências de quaisquer falhas que possam 
+                            eventualmente existir no site, ou por possíveis lucros cessantes ou danos decorrentes dessas 
+                            falhas. O visitante não deve ter como pressuposto que o site ou seu conteúdo sejam isentos 
+                            de erros, ou que serão adequados ao objetivo particular que o visitante tem em mente ao usá-lo.
+                        </p>
+                        <p>
+                            O SICA.COM.BR poderá, a seu exclusivo critério e em qualquer tempo, modificar ou desativar 
+                            o site, bem como limitar, cancelar ou suspender seu uso ou o acesso ao site e/ou fazer 
+                            modificações nestes Termos de Uso.
+                        </p>
+
+                        <h4>DIREITOS AUTORAIS E MARCAS</h4>
+                        <p>
+                            Os documentos e informações contidos no SICA.COM.BR constituem materiais protegidos por
+                             direitos autorais, pertencentes ao SICA.COM.BR e seus respectivos fornecedores de informações.
+                             A reprodução ou armazenamento de materiais recuperados a partir deste serviço sujeitará os
+                             infratores às penas das leis aplicáveis em matéria de direito autoral. As imagens contidas neste
+                             website são aqui incorporadas apenas para fins de visualização, e, salvo autorização expressa
+                             por escrito, não podem ser gravadas ou baixadas via download.
+                        </p>
+                        <p>
+                            O termo SICA.COM.BR , seu logotipo, bem como todos os elementos característicos da tecnologia
+                             desenvolvida e aqui apresentada, sob a forma da articulação de bases de dados, constituem
+                             marcas registradas e propriedades intelectuais privadas e todos os direitos decorrentes de
+                             seu registro são assegurados por lei.
+                        </p>
+
+                        <h4>PROPRIEDADE DOS MATERIAIS</h4>
+                        <p>
+                            Os materiais são protegidos por copyright nacionais e por leis internacionais de copyright. 
+                            Não podem ser copiados, reproduzidos, modificados, publicados, atualizados, postados, 
+                            transmitidos ou distribuídos de qualquer maneira sem autorização prévia e por escrito do 
+                            SICA.COM.BR que não cede nenhum direito implícito ou explícito sob nenhuma patente, copyright, 
+                            marca registrada ou informações de segredo comercial.
+                        </p>
+                        <p>
+                            Outros direitos podem ser cedidos pelo SICA.COM.BR por escrito ou quando explicitado em 
+                            alguma licença especial ou contrato. O SICA.COM.BR pode cancelar esta licença a qualquer
+                             momento se não cumprido os termos desta licença.
+                        </p>
+
+                        <h4>EXCLUSÃO</h4>
+                        <p>
+                            Os materiais são fornecidos "como estão" sem nenhuma garantia explícita ou implícita, inclusiv
+                            e garantias de comerciabilidade, não-infração de propriedade intelectual, ou de adequação a
+                             qualquer objetivo específico. Em nenhum caso o SICA.COM.BR ou os seus fornecedores serão 
+                            responsabilizados por quaisquer danos incluindo (sem limitação), lucros cessantes, interrupção
+                             de negócio, ou perda de informação que resultem do uso ou da incapacidade de usar os materiais,
+                             mesmo que o SICA.COM.BR tenha sido avisada da possibilidade de tais danos. Como algumas 
+                            jurisdições proíbem a exclusão ou limitação da responsabilidade por danos, conseqüências ou 
+                            incidentais, as limitações acima podem não ser aplicadas a você. O SICA.COM.BR não garante 
+                            a precisão ou integridade das informações, textos, gráficos, links e outros itens dos materiais
+                            . O SICA.COM.BR pode alterar os materiais ou produtos, objetos desta licença a qualquer tempo
+                             e sem aviso prévio. O TOPGYN.COM.BR não se compromete a atualizar os materiais.
+                        </p>
+
+                        <h4>AVISO ESPECÍFICO PARA OS DOCUMENTOS DISPONÍVEIS</h4>
+                        <p>
+                            Os documentos e gráficos correlatos publicados neste site podem conter imprecisões técnicas ou 
+                            erros tipográficos. Alterações serão incluídas periodicamente nas informações aqui contidas
+                            . O SICA.COM.BR e/ou seus respectivos fornecedores poderão efetuar aperfeiçoamentos e/ou
+                             alterações no(s) produto(s) aqui descrito(s) a qualquer tempo.
+                        </p>
+                        <p>
+                            Em nenhuma hipótese, o SICA.COM.BR e/ou seus respectivos fornecedores serão responsáveis 
+                            por qualquer dano especial, conseqüencial ou qualquer outro dano direto ou indireto decorrente
+                             da impossibilidade de uso, perda de dados ou lucros, seja em razão de contrato, culpa ou dolo
+                            , resultante ou relativo ao uso ou desempenho do software, dos documentos, do fornecimento ou
+                             falha no fornecimento de serviços, ou de informações disponíveis neste site. Ademais, o 
+                            SICA.COM.BR tem como objetivo somente propiciar aos usuários rapidez e facilidade a serviços
+                             e informações on-line, sem que isto seja uma certificação dos mesmos. Sobre o conteúdo de 
+                            artigos, o TOPGYN.COM.BR não se responsabiliza pelos mesmos, vez que tais textos não são de
+                             sua autoria, bem como não traduzem, necessariamente, a opinião do site, pois este instrumento
+                             tem o atributo único de reunir as diversas opiniões acerca dos diversos temas na rede mundial
+                             de computadores.
+                        </p>
+
+                        <h4>SUBMISSÃO DO USUÁRIO E COLABORADOR</h4>
+                        <p>
+                            Qualquer material, informação, artigos ou outras comunicações que forem transmitidas ou colocadas
+                             neste site serão considerados informação não confidencial. O SICA.COM.BR não terá obrigação
+                             alguma com respeito à essas informações de terceiros. É terminantemente proibido colocar ou
+                             transmitir para ou deste site, qualquer material ilegal, ameaçador, difamador, obsceno,
+                             pornográfico ou outro que possa violar qualquer lei. O SICA.COM.BR reserva-se o direito 
+                            de restringir o acesso às informações cedidas por terceiros aos seus assinantes e colaboradores.
+                        </p>
+
+                        <h4>LINKS PARA OUTROS MATERIAIS</h4>
+                        <p>
+                            Os sites apontados não estão sob o controle do SICA.COM.BR que não é responsável pelo conteúdo 
+                            de qualquer site apontado ou qualquer link contido num site apontado. O SICA.COM.BR reserva 
+                            o direito de eliminar qualquer link ou programa de ligação a qualquer momento. O SICA.COM.BR 
+                            não endossa firmas ou produtos para quem aponta links e reserva o direito de anotar este fato 
+                            nas suas páginas na web.
+                        </p>
+
+                        <h4>LEIS APLICÁVEIS</h4>
+                        <p>
+                            Este site é controlado e operado pelo SICA.COM.BR a partir de seu escritório na cidade de
+                             Lorena estado de SP e não garante que os materiais do site sejam adequados ou estejam 
+                            disponíveis para uso em outras localidades. Seu acesso é proibido em territórios onde o 
+                            conteúdo dos materiais seja considerado ilegal. Aqueles que optarem por acessar este site 
+                            a partir de outras localidades o farão por iniciativa própria e serão responsáveis pelo 
+                            cumprimento das leis locais aplicáveis. Os materiais não deverão ser usados ou exportados 
+                            em descumprimento das leis brasileiras sobre exportação. Qualquer pendência com relação aos 
+                            materiais será dirimida pelas leis brasileiras.
+                        </p>
+
+                        <h4>INFORMAÇÕES SOBRE MARCAS REGISTRADAS</h4>
+                        <p>
+                            As marcas registradas do SICA.COM.BR só podem ser usadas publicamente com autorização expressa. 
+                            O uso destas marcas registradas em publicidade e promoção de produtos deve ser adequadamente informado.
+                        </p>
+
+                        <h4>RECLAMAÇÕES SOBRE VIOLAÇÃO DE DIREITOS AUTORAIS</h4>
+                        <p>
+                            O SICA.COM.BR respeita a propriedade intelectual de outras pessoas ou empresas e solicitamos 
+                            aos nossos membros que façam o mesmo. Caso seu trabalho tenha sido copiado e esteja acessível
+                             no serviço do TOPGYN.COM.BR de maneira que constitua uma violação de direito autoral, você 
+                            poderá notificar o SICA.COM.BR , fornecendo ao responsável por direitos autorais do SICA.COM.BR 
+                            as seguintes informações:
+                        </p>
+                        <p>
+                            a)identificação do URL ou outro local específico no site onde o material em relação ao qual se
+                             reclama a existência de violação pode ser localizado;
+                        </p>
+                        <p>
+                            b)uma descrição dos trabalhos protegidos por direitos autorais em relação aos quais se reclama 
+                             a existência de violação, inclusive o URL (ou seja, o endereço da pagina na web) do local onde
+                              o trabalho protegido por direito autoral pode ser encontrado, ou uma cópia do trabalho protegido 
+                             por direito autoral;
+                        </p>
+                        <p>
+                            c) o endereço, número de telefone e endereço de e-mail do autor;
+                        </p>
+                        <p>
+                            d) uma declaração feita pelo autor, sob pena de perjúrio, de que as informações acima, contidas
+                             em sua Notificação, são corretas e que se trata de detentor do direito autoral ou a pessoa
+                             autorizada a atuar em nome do detentor do direito autoral.
+                        </p>
+                        <p>
+                            O responsável pelo TOPGYN.COM.BR para notificação de quaisquer reclamações de violação de 
+                            direitos autorais pode ser contatado pelo formulário fale conosco do site ou via postal: Rua 
+                            Dr. Hidey Noguehi, QD 40 Lote 12 – Vila Mariana – Aparecida de Goiânia GO – CEP: 74980-000
+                        </p>
+                        <p>
+                            © Copyright 2016 Sica Sistema de integração cliente-autônomo.Proibida sua reprodução total ou parcial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%-- Script para abrir barra de pesquisa --%>
+        <script>
+            $("#form-snippets").on("click", function () {
+                return false;
+            });
+        </script>
+    </form>
+</body>
+</html>
