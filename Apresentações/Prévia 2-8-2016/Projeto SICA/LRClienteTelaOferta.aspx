@@ -6,12 +6,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container funndo fundoRoxo">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="titulo2">Leilão Reverso:</h2>
-            </div>
+        <div class="row" style="background-color: white">
+            <h3 style="text-align: center">Leilão Reverso</h3>
         </div>
     </div>
+    <br />
     <div class="container funndo bordaa">
         <hr class="hr1" />
         <div class="row">

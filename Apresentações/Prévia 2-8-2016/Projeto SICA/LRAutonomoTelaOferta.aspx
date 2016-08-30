@@ -9,9 +9,10 @@
         <div class="row" style="background-color: white">
             <h3 style="text-align: center">Leilão Reverso</h3>
         </div>
-
+       
         <br />
         <div class="row" style="background-color: white; padding: 5px">
+
             <div class="col-lg-2">
                 <img src="img/cards/8.jpg" style="border-radius: 100%" />
             </div>
