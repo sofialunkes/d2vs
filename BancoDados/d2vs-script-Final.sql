@@ -62,6 +62,7 @@ VALUES ('cli', 'cli@cli.com', '123', '1', '2');
 INSERT INTO `d2vs`.`usu_usuario` (`USU_NOME`, `USU_EMAIL`, `USU_SENHA`, `CID_CODIGO`, `TUS_CODIGO`) 
 VALUES ('adm', 'adm@adm.com', '123', '1', '3');
 
+
 CREATE TABLE MUL_MULTIMIDIA (
 	MUL_CODIGO INT PRIMARY KEY AUTO_INCREMENT,
 	MUL_CAMINHO VARCHAR(200) NULL,
