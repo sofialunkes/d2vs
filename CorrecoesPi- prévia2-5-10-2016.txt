@@ -1,5 +1,0 @@
-mudar multiview para trabalhar com jquery
-validation - toolbox
-Fazer um único session
-
-criar aba para leiloes que o autonomo deu lance na pagina historico leilao no perfil AUTONOMO
