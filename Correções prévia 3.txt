@@ -1,0 +1,19 @@
+ALLBERT
+
+dar um lance, tentar colocar uma descrição do valor do lance que aquele autonomo está dando, ai o cliente pode avaliar o valor desse lance tanto pelo lances como pela descrição(justificativa) do valor do lance.
+
+
+O autnomo pode ver quais os leiloes q ele está participando e os lances que ele deu .
+
+nao deu tempo de realiazar o serviço - mudar essa frase. POde ser igual o do facebook, onde quando vc vai desativar a conta ele exibi radiobutton para selecionar o motivo do desativamento logo pode-se utiliza-lo para colocar O - outros e abri uma opção de textbox para que o cliente digite o porque do leilao estar sendo encerrado sem estar concluido.
+
+ainda nao foi implementada a parte do esqueceu senha
+
+
+BRUNO
+na barra de pesquisa colocar um radio buytton para escolher entre pesquisar autonomos, ou pesquisar leiloes existentes. é mais facil.
+
+seria legal ter um historio do leilao de lances, mostrar uma caixa de lances.
+
+o autonomo receber a media de valores do leilao.
+
