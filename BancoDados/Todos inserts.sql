@@ -5663,3 +5663,5 @@ VALUES  ("Programador Web","Preciso de um programa para minha loja", "2016-11-24
 INSERT INTO LEI_LEILAO 
 		(LEI_TITULO,LEI_DESCRICAO,LEI_DT_HORA_INICIO, LEI_DT_HORA_FIM, LEI_DT_PREVISAO_FIM,LEI_ENCERRADO, ATU_CODIGO, USU_CODIGO, CID_CODIGO) 
 VALUES  ("Garçom","Preciso um garçom para a festa de abertura da minha loja", "2016-11-24 00:00:00", "2016-12-24 00:00:00", "2016-12-01 00:00:00",'N',2,6,5014);
+
+INSERT INTO TMI_TIPO_MIDIA (TMI_CODIGO, TMI_DESCRICAO) VALUES (1,"Foto"), (2,"Vídeo");
