@@ -5634,14 +5634,14 @@ VALUES ('Mariana', 'dos Reis','mariana@mariana.com', 'PJkJr+wlNU1VHa4hWQuybjjVPy
 -- Autonomos
 
 INSERT INTO `d2vs`.`usu_usuario` (`USU_NOME`, `USU_SOBRENOME`, `USU_EMAIL`, `USU_SENHA`, `USU_SEXO`, `USU_CPF`, `USU_DT_NASCIMENTO`, `USU_CELULAR`, `USU_TELEFONE`, `USU_BAIRRO`, `USU_ENDERECO`, `USU_CEP`, `USU_COMPLEMENTO`, `USU_ATIVO`, `USU_NUM_CASA`, `USU_PAGA_PREMIUM`, `CID_CODIGO`, `TUS_CODIGO`, `USU_MEDIA`, `USU_QNT_AVS`) 
-VALUES ('Maria', 'Martins','maria@maria.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'f', '12345678904', '1985-01-01', '012981470547', '01231223734', 'Velha Lorena', 'Rua das Marias', '12563054', 'Apartamento', 's', '35A', 'n', '5014', '1', 0, 0);
+VALUES ('Maria', 'Martins','maria@maria.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'f', '12345678904', '1985-01-01', '012981470547', '01231223734', 'Velha Lorena', 'Rua das Marias', '12563054', 'Apartamento', 's', '35A', 'n', '5014', '1', 5, 1);
 
 
 INSERT INTO `d2vs`.`usu_usuario` (`USU_NOME`, `USU_SOBRENOME`, `USU_EMAIL`, `USU_SENHA`, `USU_SEXO`, `USU_CPF`, `USU_DT_NASCIMENTO`, `USU_CELULAR`, `USU_TELEFONE`, `USU_BAIRRO`, `USU_ENDERECO`, `USU_CEP`, `USU_COMPLEMENTO`, `USU_ATIVO`, `USU_NUM_CASA`, `USU_PAGA_PREMIUM`, `CID_CODIGO`, `TUS_CODIGO`,`USU_MEDIA`, `USU_QNT_AVS`) 
-VALUES ('Albertino', 'Sampaio','albertino@albertino.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'm', '12345678905', '1975-01-01', '012999470547', '01231223763', 'Nova Guará', 'Rua dos Alberts', '12843054', 'Casa', 's', '846', 'n', '4916', '1',0, 0);
+VALUES ('Albertino', 'Sampaio','albertino@albertino.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'm', '12345678905', '1975-01-01', '012999470547', '01231223763', 'Nova Guará', 'Rua dos Alberts', '12843054', 'Casa', 's', '846', 'n', '4916', '1',5, 1);
 
 INSERT INTO `d2vs`.`usu_usuario` (`USU_NOME`, `USU_SOBRENOME`, `USU_EMAIL`, `USU_SENHA`, `USU_SEXO`, `USU_CPF`, `USU_DT_NASCIMENTO`, `USU_CELULAR`, `USU_TELEFONE`, `USU_BAIRRO`, `USU_ENDERECO`, `USU_CEP`, `USU_COMPLEMENTO`, `USU_ATIVO`, `USU_NUM_CASA`, `USU_PAGA_PREMIUM`, `CID_CODIGO`, `TUS_CODIGO`,`USU_MEDIA`, `USU_QNT_AVS`) 
-VALUES ('Felipe', 'Martins','felipe@felipe.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'm', '12345678906', '1995-01-01', '012981477633', '01236723734', 'Centro', 'Rua dos Felipes', '12563056', 'Casa', 's', '363', 'n', '4916', '1',0, 0);
+VALUES ('Felipe', 'Martins','felipe@felipe.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'm', '12345678906', '1995-01-01', '012981477633', '01236723734', 'Centro', 'Rua dos Felipes', '12563056', 'Casa', 's', '363', 'n', '4916', '1',2, 2);
 
 INSERT INTO `d2vs`.`USP_USUARIO_PROFISSAO` (`PRO_CODIGO`, `USU_CODIGO`, `USP_DESCRICAO`) 
 VALUES (1, 7, "Professora de Inglês por mais de 5 anos, experiência internacional");
@@ -5665,3 +5665,39 @@ INSERT INTO LEI_LEILAO
 VALUES  ("Garçom","Preciso um garçom para a festa de abertura da minha loja", "2016-11-24 00:00:00", "2016-12-24 00:00:00", "2016-12-01 00:00:00",'N',2,6,5014);
 
 INSERT INTO TMI_TIPO_MIDIA (TMI_CODIGO, TMI_DESCRICAO) VALUES (1,"Foto"), (2,"Vídeo");
+
+INSERT INTO MUL_MULTIMIDIA (MUL_CAMINHO, MUL_DESCRICAO, USU_CODIGO, TMI_CODIGO) VALUES
+("/img/uploaded/1/perfil.png","Perfil",1,1),
+("/img/uploaded/2/perfil.png","Perfil",2,1),
+("/img/uploaded/3/perfil.png","Perfil",3,1),
+("/img/uploaded/4/perfil.png","Perfil",4,1),
+("/img/uploaded/5/perfil.png","Perfil",5,1),
+("/img/uploaded/6/perfil.png","Perfil",6,1),
+("/img/uploaded/7/perfil.png","Perfil",7,1),    
+("/img/uploaded/8/perfil.png","Perfil",8,1),
+("/img/uploaded/9/perfil.png","Perfil",9,1);
+
+INSERT INTO ESP_ESPECIALIDADE (ESP_NOME,USU_CODIGO, PRO_CODIGO) VALUES
+("Conversação",7,1),
+("Escrita",7,1),
+("Escuta",7,1),
+("Java",8,3),
+("C",8,3),
+("C#",8,3),
+("Html",8,3),
+("Festas",9,2),
+("Casamentos",9,2),
+("Formaturas",9,2);
+
+INSERT INTO LEI_LEILAO (LEI_TITULO, LEI_DESCRICAO, LEI_DT_HORA_INICIO, LEI_DT_HORA_FIM, LEI_DT_PREVISAO_FIM, LEI_ENCERRADO,  ATU_CODIGO, USU_CODIGO, CID_CODIGO) VALUES
+("Formatação de Notebook","Formatar e backup","2016-01-01 00:00:00","2016-01-01 00:00:00","2016-01-01 00:00:00","S",3,6,1),
+("Garçom para festa","Festa infantil","2016-01-01 00:00:00","2016-01-01 00:00:00","2016-01-01 00:00:00","S",2,5,2),
+("Garçom para formatura","Festa formatura de Graduação","2016-01-01 00:00:00","2016-01-01 00:00:00","2016-01-01 00:00:00","S",2,6,3),
+("Professora de Ingês","Ensinar meu filho","2016-01-01 00:00:00","2016-01-01 00:00:00","2016-01-01 00:00:00","S",1,6,3);
+   
+   
+INSERT INTO AVS_AVALIACAO_SERVICO (AVS_TITULO, AVS_DESCRICAO, AVS_PONTUACAO, AVS_RECOMENDA, AVS_DATA, LEI_CODIGO,USU_CODIGO_CLIENTE,USU_CODIGO_AUTONOMO) VALUES
+("Muito bom o serviço","Profissional honesto, fez o combinado", 5, 'S', "2016-01-01 00:00:00", 4, 6, 8),
+("Mais ou menos","Fez o seu trabalho, nada além disso", 3, 'S', "2016-01-01 00:00:00", 5, 5, 9),
+("Precisa melhorar","Derrubou refrigerante em mim", 1, 'N', "2016-01-01 00:00:00", 6, 6, 9),
+("Bom trabalho","Excelente professora, ensina cantando, perfeito!", 5, 'S', "2016-01-01 00:00:00", 7, 6, 7);

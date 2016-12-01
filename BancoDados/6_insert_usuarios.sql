@@ -21,11 +21,11 @@ VALUES ('Mariana', 'dos Reis','mariana@mariana.com', 'PJkJr+wlNU1VHa4hWQuybjjVPy
 -- Autonomos
 
 INSERT INTO `d2vs`.`usu_usuario` (`USU_NOME`, `USU_SOBRENOME`, `USU_EMAIL`, `USU_SENHA`, `USU_SEXO`, `USU_CPF`, `USU_DT_NASCIMENTO`, `USU_CELULAR`, `USU_TELEFONE`, `USU_BAIRRO`, `USU_ENDERECO`, `USU_CEP`, `USU_COMPLEMENTO`, `USU_ATIVO`, `USU_NUM_CASA`, `USU_PAGA_PREMIUM`, `CID_CODIGO`, `TUS_CODIGO`, `USU_MEDIA`, `USU_QNT_AVS`) 
-VALUES ('Maria', 'Martins','maria@maria.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'f', '12345678904', '1985-01-01', '012981470547', '01231223734', 'Velha Lorena', 'Rua das Marias', '12563054', 'Apartamento', 's', '35A', 'n', '5014', '1', 0, 0);
+VALUES ('Maria', 'Martins','maria@maria.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'f', '12345678904', '1985-01-01', '012981470547', '01231223734', 'Velha Lorena', 'Rua das Marias', '12563054', 'Apartamento', 's', '35A', 'n', '5014', '1', 5, 1);
 
 
 INSERT INTO `d2vs`.`usu_usuario` (`USU_NOME`, `USU_SOBRENOME`, `USU_EMAIL`, `USU_SENHA`, `USU_SEXO`, `USU_CPF`, `USU_DT_NASCIMENTO`, `USU_CELULAR`, `USU_TELEFONE`, `USU_BAIRRO`, `USU_ENDERECO`, `USU_CEP`, `USU_COMPLEMENTO`, `USU_ATIVO`, `USU_NUM_CASA`, `USU_PAGA_PREMIUM`, `CID_CODIGO`, `TUS_CODIGO`,`USU_MEDIA`, `USU_QNT_AVS`) 
-VALUES ('Albertino', 'Sampaio','albertino@albertino.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'm', '12345678905', '1975-01-01', '012999470547', '01231223763', 'Nova Guará', 'Rua dos Alberts', '12843054', 'Casa', 's', '846', 'n', '4916', '1',0, 0);
+VALUES ('Albertino', 'Sampaio','albertino@albertino.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'm', '12345678905', '1975-01-01', '012999470547', '01231223763', 'Nova Guará', 'Rua dos Alberts', '12843054', 'Casa', 's', '846', 'n', '4916', '1',5, 1);
 
 INSERT INTO `d2vs`.`usu_usuario` (`USU_NOME`, `USU_SOBRENOME`, `USU_EMAIL`, `USU_SENHA`, `USU_SEXO`, `USU_CPF`, `USU_DT_NASCIMENTO`, `USU_CELULAR`, `USU_TELEFONE`, `USU_BAIRRO`, `USU_ENDERECO`, `USU_CEP`, `USU_COMPLEMENTO`, `USU_ATIVO`, `USU_NUM_CASA`, `USU_PAGA_PREMIUM`, `CID_CODIGO`, `TUS_CODIGO`,`USU_MEDIA`, `USU_QNT_AVS`) 
-VALUES ('Felipe', 'Martins','felipe@felipe.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'm', '12345678906', '1995-01-01', '012981477633', '01236723734', 'Centro', 'Rua dos Felipes', '12563056', 'Casa', 's', '363', 'n', '4916', '1',0, 0);
+VALUES ('Felipe', 'Martins','felipe@felipe.com', 'PJkJr+wlNU1VHa4hWQuybjjVPyFzuNPcPu5MBH56scHri4UQPjvnumE7MbtcnDYhTcnxSkL9ei/bhIVrylxEwg==', 'm', '12345678906', '1995-01-01', '012981477633', '01236723734', 'Centro', 'Rua dos Felipes', '12563056', 'Casa', 's', '363', 'n', '4916', '1',2, 2);
