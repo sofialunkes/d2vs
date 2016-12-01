@@ -1,12 +1,16 @@
-INSERT INTO atu_atuacao (atu_area) VALUES
+INSERT INTO atu_atuacao (atu_area) values
 ('Tecnologia da informação'),
 ('Educação'),
-('Gastronomia');
+('Gastronomia'),
+('Construção'),
+('Domésticas');
 
-INSERT INTO pro_profissao (pro_nome, atu_codigo) VALUES 
+INSERT INTO pro_profissao (pro_nome, atu_codigo) values 
 ('Professor de inglês',2),
 ('Garçom',3),
-('Programador Web',1);
+('Programador Web',1),
+('Pedreiro',4),
+('Babá',5);
 
 INSERT INTO EST_ESTADO (EST_CODIGO, EST_NOME, EST_UF) VALUES
 (1, 'Acre', 'AC'),
@@ -5658,11 +5662,11 @@ VALUES  ("Aula Particular de Inglês","Preciso de um professor/a que foque na fa
 
 INSERT INTO LEI_LEILAO 
 		(LEI_TITULO,LEI_DESCRICAO,LEI_DT_HORA_INICIO, LEI_DT_HORA_FIM, LEI_DT_PREVISAO_FIM,LEI_ENCERRADO, ATU_CODIGO, USU_CODIGO, CID_CODIGO) 
-VALUES  ("Programador Web","Preciso de um programa para minha loja", "2016-11-24 00:00:00", "2016-12-24 00:00:00", "2016-12-01 00:00:00",'N',3,6,5014);
+VALUES  ("Programador Web","Preciso de um programa para minha loja", "2016-11-24 00:00:00", "2016-12-24 00:00:00", "2016-12-01 00:00:00",'N',1,6,5014);
 
 INSERT INTO LEI_LEILAO 
 		(LEI_TITULO,LEI_DESCRICAO,LEI_DT_HORA_INICIO, LEI_DT_HORA_FIM, LEI_DT_PREVISAO_FIM,LEI_ENCERRADO, ATU_CODIGO, USU_CODIGO, CID_CODIGO) 
-VALUES  ("Garçom","Preciso um garçom para a festa de abertura da minha loja", "2016-11-24 00:00:00", "2016-12-24 00:00:00", "2016-12-01 00:00:00",'N',2,6,5014);
+VALUES  ("Garçom","Preciso um garçom para a festa de abertura da minha loja", "2016-11-24 00:00:00", "2016-12-24 00:00:00", "2016-12-01 00:00:00",'N',3,6,5014);
 
 INSERT INTO TMI_TIPO_MIDIA (TMI_CODIGO, TMI_DESCRICAO) VALUES (1,"Foto"), (2,"Vídeo");
 
